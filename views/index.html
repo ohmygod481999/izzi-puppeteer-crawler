@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body h1 {
+                font-family: "Bebas Neue", cursive;
+            }
+        </style>
+        <title>HTML CRAWLER</title>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1>Welcome to IZZI Nodejs Server</h1>
+            <hr />
+            <h3 class="mt-5">APIS</h3>
+            <ol>
+                <li>
+                    <p>
+                        <strong>GET:</strong>
+                        /get-html?url=https%3A%2F%2Fwww.google.com%2F
+                    </p>
+                    <p>
+                        Pass url has encoded in to url query: ?url=<i
+                            >//Your url encoded here</i
+                        >
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Status Code</th>
+                                <th scope="col">JSON Response</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>200</td>
+                                <td>
+                                    <pre>
+{
+    "success":true
+    ,"status":200
+    ,"data":{
+        "url":"url.com",
+        "html":"html here"
+    },
+    "message":"Bad Request"
+}</pre
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>400</td>
+                                <td>
+                                    <pre>
+{"success":false,"status":400,"data":null,"message":"Bad Request"}</pre
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ol>
+            <p style="text-align: right;"><i>Developed by Longvb</i></p>
+        </div>
+    </body>
+</html>
